@@ -147,7 +147,7 @@
     btnKirim.classList.toggle('d-none');
 
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then((response => {
+      .then((response) => {
         //tampilkan tombol kirim, hilangkan tombol loading
         btnLoading.classList.toggle('d-none');
         btnKirim.classList.toggle('d-none');
@@ -156,10 +156,9 @@
         //reset form
         form.reset();
         console.log('Success!', response);
-      });
-      .catch((error => console.error('Error!', error.message));
-  });
-</script>
-
-  </body>
+      })
+      .catch((error) => console.error('Error!', 'error.message'));
+    })
+  </script>
+ </body>
 </html>
